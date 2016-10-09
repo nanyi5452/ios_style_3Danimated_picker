@@ -17,7 +17,6 @@ import android.os.Message;
 import android.support.v4.view.ViewConfigurationCompat;
 import android.text.TextPaint;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.View;
@@ -33,7 +32,6 @@ import java.util.GregorianCalendar;
  * Created by nanyi545 on 16-9-30.
  */
 public class ItemPicker extends View {
-
 
 
     private float itemTextSize; // in sp
@@ -156,12 +154,19 @@ public class ItemPicker extends View {
 
 
 
+
+
     public String getFormattedItem(int item){
         if (scrollMode==MODE_CYCLIC)
         return formatter.format(itemList[item]);
         else if (scrollMode==MODE_ONCE)
             return formatter.format(itemListForOnce[item]);
         return "wrong scroll mode!";
+    }
+
+
+    public String getFormattedItem(){
+        return formatter.format(getSelectedItem());
     }
 
 
@@ -181,7 +186,7 @@ public class ItemPicker extends View {
     int viewWidth,viewHeight,verticalSpacing, viewCenterY,itemAngle,offSetAngleMax;
 
 
-    int[] itemList={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17};
+    int[] itemList={4,5,6,7,8,9,10,11,12,13,14,15,16,17};
     int[] itemListForOnce={};
 
 
@@ -265,10 +270,6 @@ public class ItemPicker extends View {
                 selectedItemIndex+=itemCountsHalf;
                 oldValue=selectedItemIndex;
 
-                StringBuilder sb=new StringBuilder();
-                for (int ii=0;ii<itemListForOnce.length;ii++){
-                    sb.append(""+itemListForOnce[ii]);
-                }
                 break;
         }
 
@@ -580,7 +581,7 @@ public class ItemPicker extends View {
                 canvas.save();
                 camera.save();
                 camera.translate(0, 0, Math.abs(viewHeight/2-displayList[ii].yPosition));
-                camera.rotate(-(displayList[ii].offsetAngle), 0, 0);  // minimum sdk 12...
+                camera.rotate(-(displayList[ii].offsetAngle), 0, 0);
                 camera.getMatrix(matrix);
                 matrix.preTranslate(- (viewWidth *focalPoint+paddingLeft), -(displayList[ii].yPosition +paddingTop));  // so that the rotation happens arround the point x,y   ,  + itemTextRect.height()/2
                 matrix.postTranslate( viewWidth *focalPoint+ paddingLeft,displayList[ii].yPosition+paddingTop  );
@@ -700,7 +701,7 @@ public class ItemPicker extends View {
 
 
                     int dyAngle=displayList[selectedIndexInDisplayList].offsetAngle ;
-                    Log.i("BBB","adjustYPosition...  currentOffsetAngle:"+currentOffsetAngle+"  dyAngle:"+dyAngle+"-----------");
+//                    Log.i("BBB","adjustYPosition...  currentOffsetAngle:"+currentOffsetAngle+"  dyAngle:"+dyAngle+"-----------");
                     if (dyAngle != 0) {
 //                        Log.i("BBB","currentOffsetAngle:"+currentOffsetAngle+"  dyAngle:"+dyAngle);
                         adjustAngleStart=0;
@@ -874,11 +875,11 @@ public class ItemPicker extends View {
                 if (scrollMode==MODE_ONCE){  //  touchOffsetY +  --> finger scroll down       touchOffsetY -  --> finger scroll up
                     if ( ((selectedItemIndex+itemCountsHalf)>=itemListForOnce.length-1) &&  touchOffsetY<0 ){
                         touchOffsetY=0;
-                        Log.i("BBB","UP--------REACHED");
+//                        Log.i("BBB","UP--------REACHED");
                     }
                     if ( ((selectedItemIndex-itemCountsHalf)<=0) &&  touchOffsetY>0 ){
                         touchOffsetY=0;
-                        Log.i("BBB","DOWN--------REACHED");
+//                        Log.i("BBB","DOWN--------REACHED");
                     }
                 }
                 touchStartY=touchCurrentY;
@@ -969,7 +970,7 @@ public class ItemPicker extends View {
 
     public static int[] generateArray(int size){
         int[] ret=new int[size];
-        for (int ii=0;ii<size;ii++)ret[ii]=ii;
+        for (int ii=0;ii<size;ii++)ret[ii]=ii+4;
         return ret;
     }
 
