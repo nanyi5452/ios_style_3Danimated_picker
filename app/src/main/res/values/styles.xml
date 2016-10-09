@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+    <declare-styleable name="ItemPicker">
+        <attr name="textSize" format="dimension" />
+        <attr name="heightAdjustment" format="float" />
+        <attr name="focalPoint" format="float" />
+        <attr name="startIndex" format="integer" />
+        <attr name="itemCountHalf" format="integer" />
+        <attr name="highLightColor" format="color" />
+        <attr name="highLightIndicator" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="rect" value="1"/>
+            <enum name="single_line" value="2"/>
+            <enum name="double_line" value="3"/>
+            <enum name="round_rect" value="4"/>
+        </attr>
+        <attr name="scrollMode" format="enum">
+            <enum name="cyclic" value="1"/>
+            <enum name="show_once" value="2"/>
+        </attr>
+
+    </declare-styleable>
+
+
+</resources>
