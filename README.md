@@ -67,6 +67,18 @@ public void resetFormatter(Formatter formatter,int[] newItemList,int startIndex)
 
 
 
+```xml
+        app:scrollMode=""    
+```
+allows you to set if the the items are showing repeated or not
+
+show_once:
+
+
+cyclic: 
+
+
+
 
 ```xml
         app:highLightIndicator=" "
