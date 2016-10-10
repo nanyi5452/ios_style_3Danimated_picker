@@ -1,5 +1,5 @@
 # an ios style picker
-an ios-styled picker, with 3d animation. 
+an ios-styled picker, with 3D tilting. 
 
 
 how does it look?
@@ -132,9 +132,9 @@ If this bothers you. You can call this method
         ItemPicker.syncFocalPoint(ItemPicker... pickers);
 ```
 
-after which the tilting of the pickers will be re-adjusted.
+after which the tilting of the pickers will be re-adjusted.  
 
 ![](https://github.com/nanyi5452/ios_style_3Danimated_picker/blob/master/files/focused.png)
 
 
-
+This method ItemPicker.syncFocalPoint() should only be called afer the pickers are fully drawn, so you can not call this in onCreate()/onResume() method, but in Handlers and you should trigger the handlers by sendEmptyMessageDelayed(1,300)   
