@@ -31,10 +31,20 @@ allprojects {
 
 
 
-
-more
+usage
 --------
+use of pick is as simple as below
 
+```xml
+    <com.nanyi545.ww.itempicklib.ItemPicker
+        android:id="@+id/date_picker"
+        android:padding="10dp"
+        app:textSize="18sp"
+        app:highLightIndicator="round_rect"
+        android:background="#FFFFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+```
 
 
 
