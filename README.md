@@ -55,23 +55,16 @@ The items selected are nothing other than an array of integers, the text showing
 ```
 
 
+
+
 By calling resetFormatter() you can costumize the items of the picker by changing the integer array, as well as the Formatter instance. 
 
+```java
+public void resetFormatter(Formatter formatter)  // changes Formatter instance only.
+public void resetFormatter(Formatter formatter,int[] newItemList)  //changes both Formatter and the int array.
+public void resetFormatter(Formatter formatter,int[] newItemList,int startIndex)   //   you can specify initial item you want to select.
 ```
-public void resetFormatter(Formatter formatter)
-```
-changes Formatter instance only.
 
-
-```
-public void resetFormatter(Formatter formatter,int[] newItemList)
-```
-changes both Formatter and the int array.
-
-```
-public void resetFormatter(Formatter formatter,int[] newItemList,int startIndex)
-```
-changes both Formatter and the int array, and the initial item you want to select.
 
 
 
