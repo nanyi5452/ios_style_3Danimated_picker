@@ -124,7 +124,7 @@ The size of the view is decided by the number of items, text size and paddings. 
 
 The default center points with respect to which 3D tilting happens is the at the horizontal centers. So if put serveral pickers together horizontally, by default you see the texts tilted with respect to the center of each picker.
 
-![]
+![](https://github.com/nanyi5452/ios_style_3Danimated_picker/blob/master/files/unfocused.png)
 
 If this bothers you. You can call this method
 
@@ -132,9 +132,9 @@ If this bothers you. You can call this method
         ItemPicker.syncFocalPoint(ItemPicker... pickers);
 ```
 
-after which the pickers will be re-adjusted.
+after which the tilting of the pickers will be re-adjusted.
 
-![]
+![](https://github.com/nanyi5452/ios_style_3Danimated_picker/blob/master/files/focused.png)
 
 
 
