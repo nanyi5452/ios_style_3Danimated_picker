@@ -1,10 +1,13 @@
-# ios_style_3Danimated_picker
-an ios-style item picker, with 3d animation 
+# an ios style picker
+an ios-styled picker, with 3d animation. 
 
 
 how does it look?
 --------
 ![](https://github.com/nanyi5452/ios_style_3Danimated_picker/blob/master/files/general_look.gif)
+
+Material design time pickers look nice, but if you want to have time picked with less area on screen, ios-styled picker seems to me a good choice.
+
 
 
 download 
@@ -28,6 +31,9 @@ allprojects {
 
 
 
+
+more
+--------
 
 
 
