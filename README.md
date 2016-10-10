@@ -12,17 +12,21 @@ download
 you can either download it and include it as a liberary
 
 or you can add to your build.gradle
-
-   compile 'com.github.nanyi5452:ios_style_3Danimated_picker:1cdec32d25'
-
+```groovy
+compile 'com.github.nanyi5452:ios_style_3Danimated_picker:1cdec32d25'
+```
 and your root build.gradle
-
+```groovy
 allprojects {
     repositories {
         jcenter()
         maven { url "https://jitpack.io" }
     }
 }
+```
+
+
+
 
 
 
