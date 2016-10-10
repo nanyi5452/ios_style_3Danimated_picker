@@ -67,15 +67,30 @@ public void resetFormatter(Formatter formatter,int[] newItemList,int startIndex)
 
 
 
+Of course, there are methods to get the selected item, and add listeners for selection change. 
+```java
+getSelectedItem()  //  gives you the index of selected item (index in the integer array)
+getFormattedItem()  //  gives you the selected text 
+
+setOnSelectionChangedListener(ItemPicker.OnSelectionChangedListener onSelectionChangedListener)  
+```
+
+
+
+
 ```xml
         app:scrollMode=""    
 ```
 allows you to set if the the items are showing repeated or not
 
-show_once:
+show_once:                                                                            
+![](https://github.com/nanyi5452/ios_style_3Danimated_picker/blob/master/files/once.gif)
 
 
-cyclic: 
+cyclic:                                                                     
+![](https://github.com/nanyi5452/ios_style_3Danimated_picker/blob/master/files/cyclic.gif)
+
+
 
 
 
@@ -84,6 +99,42 @@ cyclic:
         app:highLightIndicator=" "
 ```
 allows you to change the drawing to highlight the selected item in the middle. Other alternatives are double_line,single_line,rect,none
+```xml
+        app:highLightColor=""
+```
+allows you to change the highlight drawing color.
+
+
+
+
+```xml
+        app:itemCountHalf="2"
+```
+allows you to change the total number of items on the picker. totalNumber=2 * itemCountHalf + 1.   
+
+
+
+```xml
+        app:heightAdjustment="1.6"
+```
+The size of the view is decided by the number of items, text size and paddings. It is suggested to use wrap_content for width and height. If extra vertical spacing in between items is desired, you can use heightAdjustment attribute. This float value will be multiplied to the height.
+
+
+
+
+The default center points with respect to which 3D tilting happens is the at the horizontal centers. So if put serveral pickers together horizontally, by default you see the texts tilted with respect to the center of each picker.
+
+![]
+
+If this bothers you. You can call this method
+
+```java
+        ItemPicker.syncFocalPoint(ItemPicker... pickers);
+```
+
+after which the pickers will be re-adjusted.
+
+![]
 
 
 
