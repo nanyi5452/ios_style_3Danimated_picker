@@ -1,4 +1,4 @@
-# an ios style picker
+# an ios style picker for Android 
 an ios-styled picker, with 3D tilting. 
 
 
