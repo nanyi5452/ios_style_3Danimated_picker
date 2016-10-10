@@ -45,6 +45,8 @@ use of pick is as simple as below
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 ```
+which gives a picker like this
+
 
 
 
