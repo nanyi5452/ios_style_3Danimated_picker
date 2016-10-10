@@ -73,9 +73,11 @@ public void resetFormatter(Formatter formatter,int[] newItemList,int startIndex)
 allows you to set if the the items are showing repeated or not
 
 show_once:
+![](https://github.com/nanyi5452/ios_style_3Danimated_picker/blob/master/files/once.gif)
 
 
 cyclic: 
+![](https://github.com/nanyi5452/ios_style_3Danimated_picker/blob/master/files/cyclic.gif)
 
 
 
